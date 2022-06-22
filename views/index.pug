@@ -1,0 +1,12 @@
+extend layout 
+
+block layout-content 
+    table 
+        tr 
+            th Title 
+            th Year 
+        each s in shows 
+            tr  
+                td 
+                    a(href = `https://imdb.com/title/${s.ids.imdb}` target="_blank") #{s.title}
+                td #{s.year}
